@@ -35,9 +35,10 @@ Next, in the `robotPeriodic()` function, the Command Scheduler should be run:
   }
 ```
 
-##### `autonomousInit()` ^autonomous-init
+##### `autonomousInit()`
+^autonomous-init
 
-We put the logic for declaring autonomous commands in `autonomousInit()` :
+We put the logic for declaring autonomous commands in `autonomousInit()`:
 ```java
   /** This autonomous runs the autonomous command selected by your {@link RobotContainer} class. */
   @Override
