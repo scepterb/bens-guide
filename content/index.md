@@ -2,10 +2,10 @@
 title: Overview
 ---
 (Here are some quick links you'll want to revisit later, conveniently located at the top of the page)
-##### [List of WPI Example Projects](https://github.com/wpilibsuite/allwpilib/tree/main/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj)
-- Be sure to check out:
-	- [Code Template for Our Robot](https://github.com/wpilibsuite/allwpilib/tree/main/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/templates/commandbased) 
-	- [Swerve Controller Command Example Project](https://github.com/wpilibsuite/allwpilib/tree/main/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/examples/swervecontrollercommand)
+##### Important WPI Example Projects
+-  [Code Template for Our Robot](https://github.com/wpilibsuite/allwpilib/tree/main/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/templates/commandbased) 
+- [Swerve Controller Command Example Project](https://github.com/wpilibsuite/allwpilib/tree/main/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/examples/swervecontrollercommand)
+- (See full list [here](https://github.com/wpilibsuite/allwpilib/tree/main/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj))
 ### Brief Hardware Overview
 
 It's useful to understand how the robot's actual physical structure is set up. The important component to note is the RoboRIO, which we deploy our code to. But it'd be good to read up on what the other pieces do ([see here](https://docs.wpilib.org/en/stable/docs/controls-overviews/control-system-hardware.html)).
