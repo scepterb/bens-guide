@@ -1,7 +1,7 @@
 ---
 title: Overview
 ---
-(Here are some quick links you'll want to revisit later, conveniently located at the top of the project)
+(Here are some quick links you'll want to revisit later, conveniently located at the top of the page)
 ##### [List of WPI Example Projects](https://github.com/wpilibsuite/allwpilib/tree/main/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj)
 - Be sure to check out:
 	- [Code Template for Our Robot](https://github.com/wpilibsuite/allwpilib/tree/main/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/templates/commandbased) 
