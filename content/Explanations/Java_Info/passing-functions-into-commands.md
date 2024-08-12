@@ -30,5 +30,3 @@ To define a function inline, we use *lambda expressions*.
 // Create an InstantCommand that runs the drive forward at half speed
 Command driveHalfSpeed = runOnce(() -> { drivetrain.arcadeDrive(0.5, 0.0); }, drivetrain);
 ```
----
-These two methods are pretty verbose, so see [[overview#Clean Code]] for other ways we define commands if you want.
