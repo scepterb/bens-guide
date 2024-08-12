@@ -23,7 +23,7 @@ if(condition.get()) {
 Note that in the first example, we use a *lambda expression* to pass the `piston.set()` as a parameter of the command `.runOnce()`. You will often need to pass functions as a parameter in command-based programming so that you may run functions using commands. See [[passing-functions-into-commands]] for more info on the code structures used to do this.
 ### Key Abstractions:
 
-- **Commands** represent actions the robot can take. Commands run when scheduled, until they are interrupted or their end condition is met. [Commands can be composed together](https://docs.wpilib.org/en/stable/docs/software/commandbased/command-compositions.html) to accomplish more-complicated tasks. See [Commands](https://docs.wpilib.org/en/stable/docs/software/commandbased/commands.html#commands) for more info.
+- **Commands** represent actions the robot can take. Commands run when scheduled, until they are interrupted or their end condition is met. [Commands can be composed together](https://docs.wpilib.org/en/stable/docs/software/commandbased/command-compositions.html) to accomplish more-complicated tasks. See WPI's [Commands](https://docs.wpilib.org/en/stable/docs/software/commandbased/commands.html#commands) if you're confused.
 - **Subsystems** represent independently-controlled collections of robot hardware (such as motor controllers, sensors, pneumatic actuators, etc.) that operate together. Subsystems back the resource-management system of command-based: only one command can use a given subsystem at the same time.
 
 ### Command Scheduler:
@@ -38,9 +38,10 @@ Commands are run by the **CommandScheduler singleton** ([docs](https://github.w
 Good question! You can always define a command in-line with `Commands`, as seen [[command-based-structure#^in-line|in the beginning]]. But what if you need to run a certain command in multiple situations? ^in-line-mention
 
 First, let's walk through a WPI-provided example command, found [here](https://github.com/wpilibsuite/allwpilib/blob/main/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/templates/commandbased/commands/ExampleCommand.java), which is written as a separate command class by *subclassing `Command`*. Despite how intuitive this is, programmers don't often use this approach because it's very verbose. So later, we'll explore the *instance factory method*, where we define commands within a subsystem class. 
-(in the above, note the difference between [`Command`](https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/wpilibj2/command/Command.html#schedule()), a type, and [`Commands`](https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/wpilibj2/command/Commands.html) , which constructs a `Command`)
+(in the above, note the difference between [`Command`](https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/wpilibj2/command/Command.html), an object type, and [`Commands`](https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/wpilibj2/command/Commands.html), a namespace containing methods that create `Command`s)
 
-##### Subclassing `Command` %% fold %% 
+##### Subclassing `Command` 
+(OPTIONAL!! Again, this method is rather verbose)
 Let's say you already wrote code for a certain subsystem — say, our robot's arm — and now you would like to write a repeatable command for that subsystem. A simple way to do this is by writing a *custom command class* by *subclassing `Command`*.
 
 First, imports and packaging (see [[importing-and-exporting]] if you're confused)
@@ -127,14 +128,6 @@ runOnce:
         });
   }
 ```
-To create a command object, use InstantCommand (in-line):
-```java
-new InstantCommand(() -> m_robotDrive.arcadeDrive(
-    -driverController.getLeftY(),
-    driverController.getRightX()),
-    m_robotDrive)
-```
-
 
 You would then [[binding-commands-to-triggers|bind this command to a trigger]] OR [[running-command-as-subsystem-default|run command defaultly]] OR [[running-command-in-auto|run the command in autonomous mode]]. 
 
@@ -142,7 +135,7 @@ NB: For any subsystem **requirements**, first initialize the subsystems in your 
 `runOnce(Runnable, Requirements...)`
 
 ---
-### Reprise of writing commands
+### More ways of writing commands
 
-We went over the top two approaches to defining commands, as well as defining commands in-line. See WPI's full article about theses approaches [here](https://docs.wpilib.org/en/stable/docs/software/commandbased/organizing-command-based.html#instance-command-factory-methods).
+We went over the top two approaches to defining commands, as well as defining commands in-line. If you want to know more than the two approaches, see WPI's full article [here](https://docs.wpilib.org/en/stable/docs/software/commandbased/organizing-command-based.html#instance-command-factory-methods).
 ![[Clean-Code-Structures.png]]
