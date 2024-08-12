@@ -1,0 +1,18 @@
+(All of these are installed with WPI Installer)
+- Main Utility: **FRC Driver Station** ([WPI article](https://docs.wpilib.org/en/stable/docs/software/driverstation/driver-station.html))
+	- What runs our dashboards
+	- Divided into the status pane and multiple "tabs," see article if you don't know how one works
+- "Driver Dashboard": **SmartDashboard** ([WPI article](https://docs.wpilib.org/en/stable/docs/software/dashboards/smartdashboard/smartdashboard-intro.html))
+	- Used to display information about the robot for troubleshooting
+	- Opened from the Driver Station
+- **SysId** ([WPI Article](https://docs.wpilib.org/en/stable/docs/controls-overviews/control-system-software.html#system-identification))
+	- Used to calculate constants for robot mechanism
+	- Ran with *start tool* option in VSCode
+- OutlineViewer ([WPI Article](https://docs.wpilib.org/en/stable/docs/controls-overviews/control-system-software.html#outlineviewer))  %% fold %% 
+	- **We don't use this, we use SmartDashboard**
+	- Used to view, add, and modify contents of a NetworkTable ([[vision-and-AprilTags#NetworkTables|"what is a network table?"]])
+	- Can be run as separate utility in VSCode, also seen when simulating robot code
+	- This thing: ![[OutlineViewer.png]]
+- Glass  %% fold %% 
+	- **We don't use this** I think
+	- Similar to OutlineViewer, has all types of widgets to view data.

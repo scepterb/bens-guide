@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "Ben's Guide to FRC",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
@@ -54,6 +54,9 @@ const config: QuartzConfig = {
   },
   plugins: {
     transformers: [
+      Plugin.TableOfContents({
+        maxDepth: 1,
+      }),
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "filesystem"],
