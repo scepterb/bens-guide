@@ -1,7 +1,9 @@
 you're probably tired of hearing me talk about movement, but listen up, this is important:
+>[!info]
+> **Later note: the website for [Yet Another Generic Swerve Library](https://yagsl.gitbook.io/yagsl/fundamentals/swerve-drive) explains this 10 times better than me.**
 
 ---
-The purpose of **kinematics**[^1] is to convert between a universal `ChassisSpeeds` class (view [docs](https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/kinematics/ChassisSpeeds.html)) to multiple` SwerveModuleState` classes, which contains velocities and angles for each wheel of our drivetrain. Writing to `ChassisSpeeds` will change the swerve module state and move our robot!
+The purpose of **kinematics**[^1] is to convert between a universal `ChassisSpeeds` class (view [docs](https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/math/kinematics/ChassisSpeeds.html)) to multiple` SwerveModuleState` classes, which contains velocities and angles for each wheel of our drivetrain. `SwerveDriveKinematics` is the Writing to `ChassisSpeeds` will change the swerve module state and move our robot!
 
 Want to know more about what `ChassisSpeeds` is? Here:
 (From [WPI's Info about Chassis Speeds](https://docs.wpilib.org/en/stable/docs/software/kinematics-and-odometry/intro-and-chassis-speeds.html#constructing-a-chassisspeeds-object))
