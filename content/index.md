@@ -32,7 +32,7 @@ When writing code, we follow a [[command-based-structure]], a declarative paradi
 ### Movement
 
 Robots are set up in certain ways to allow for movement, and these ways are called *drivetrains*. *Differential Drive* and *Mecanum Drive* are two examples of these. We use *Swerve Drive*, meaning we have four wheels that can individually change its angle and its speed (see [[Swerve-Drive-Example-Image]] to understand what I mean). 
-This is the most complex driving scheme: note that **for each wheel**, robots using Swerve Drive need to declare 2 motors, 2 encoders, and 2 PID controllers (a mathematical operation which corrects our wheels from any error caused by external factors, read or [[overview#*Tell me more about PID controllers*|My guide to PID controllers]] or the [WPI guide to PID](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/controllers/pidcontroller.html)) 
+This is the most complex driving scheme: note that **for each wheel**, robots using Swerve Drive need to declare 2 motors, 2 encoders, and 2 PID controllers (a mathematical operation which corrects our wheels from any error caused by external factors, I'll explain more later) 
 ```java
   private final CANSparkMax m_drivingSparkMax;
   private final CANSparkMax m_turningSparkMax;
@@ -44,7 +44,7 @@ This is the most complex driving scheme: note that **for each wheel**, robots us
   private final SparkPIDController m_turningPIDController;
 ```
 
-In the WPI github library, check out the useful example projects built by WPI; these are listed [[overview#[WPI Example Projects](https //github.com/wpilibsuite/allwpilib/tree/main/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj)|at the beginning of this note]].
+In the WPI github library, check out the useful example projects built by WPI; these are listed [[index#[WPI Example Projects](https //github.com/wpilibsuite/allwpilib/tree/main/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj)|at the beginning of this note]].
 
 ==However==, we use **CAN** to connect the components to the RoboRIO, not **PWM** like the example projects use. 
 ([[what the hell is CAN?]])
