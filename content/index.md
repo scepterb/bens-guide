@@ -44,7 +44,7 @@ This is the most complex driving scheme: note that **for each wheel**, robots us
   private final SparkPIDController m_turningPIDController;
 ```
 
-In the WPI github library, check out the useful example projects built by WPI; these are listed [[index#[WPI Example Projects](https //github.com/wpilibsuite/allwpilib/tree/main/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj)|at the beginning of this note]].
+In the WPI github library, check out the useful example projects built by WPI; these are listed at the beginning of this note.
 
 ==However==, we use **CAN** to connect the components to the RoboRIO, not **PWM** like the example projects use. 
 ([[what the hell is CAN?]])
@@ -82,7 +82,5 @@ Our camera is connected via ethernet, the settings are configured from http://li
 
 First, learn about the dashboards that run on the computer used to deploy code to the robot and to control the robot in the article [[WPI-application-utilities]]. We use the **SmartDashboard**, which runs through the applications **FRC Driver Station** as the driver's dashboard. Any data that just the programmers want to see should go through the AdvantageScope dashboard, but we don't really ever use that.
 
- [[running-code-with-the-robot]]
- [[simulating-robot-code]]
-  
---- 
+[[running-code-with-the-robot]]
+[[simulating-robot-code]]
